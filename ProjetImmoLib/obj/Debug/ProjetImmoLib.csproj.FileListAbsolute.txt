@@ -154,3 +154,9 @@ C:\Users\bakkf\Desktop\immo'lib\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmo
 C:\Users\bakkf\Desktop\immo'lib\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csproj.CopyComplete
 C:\Users\bakkf\Desktop\immo'lib\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.dll
 C:\Users\bakkf\Desktop\immo'lib\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.pdb
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.SqlServer.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.xml
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.SqlServer.xml
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\EntityFramework.resources.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\EntityFramework.SqlServer.resources.dll
