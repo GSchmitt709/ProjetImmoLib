@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProjetImmoLib.brokers>
+
+@{
+    ViewBag.Title = "ListBrokers";
+}
+
+<h2>ListBrokers</h2>
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phonenumber)
+        </td>
+        <td>
+            @Html.ActionLink("Profil", "ProfilBroker", new { id = item.idBroker })
+        </td>
+    </tr>
+    }
+</table>

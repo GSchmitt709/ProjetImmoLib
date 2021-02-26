@@ -71,7 +71,6 @@ C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\System.Web.Webpag
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\System.Web.Webpages.Razor.resources.dll
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\System.Web.Helpers.resources.dll
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\System.Web.Mvc.resources.dll
-C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csprojAssemblyReference.cache
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csproj.CoreCompileInputs.cache
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csproj.CopyComplete
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.dll
@@ -160,3 +159,4 @@ C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.xml
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\EntityFramework.SqlServer.xml
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\EntityFramework.resources.dll
 C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csprojAssemblyReference.cache

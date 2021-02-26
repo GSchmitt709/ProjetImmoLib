@@ -163,6 +163,9 @@
     <Content Include="Views\brokers\AddBroker.cshtml" />
     <Content Include="Views\brokers\Index.cshtml" />
     <Content Include="Views\brokers\Error.cshtml" />
+    <Content Include="Views\brokers\Success.cshtml" />
+    <Content Include="Views\brokers\ListBrokers.cshtml" />
+    <Content Include="Views\brokers\ProfilBroker.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

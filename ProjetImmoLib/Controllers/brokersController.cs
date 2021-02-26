@@ -19,8 +19,14 @@ namespace ProjetImmoLib.Controllers
         // GET: brokers
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult ListBrokers()
+        {
             return View(db.brokers.ToList());
         }
+
 
         public ActionResult AddBroker()
         {
@@ -47,7 +53,7 @@ namespace ProjetImmoLib.Controllers
 
 
                 //db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
 
             return View();
@@ -56,6 +62,25 @@ namespace ProjetImmoLib.Controllers
         public ActionResult Error()
         {
             return View();
+        }
+
+        public ActionResult Success()
+        {
+            return View();
+        }
+
+        public ActionResult ProfilBroker(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Error");
+            }
+            brokers brokers = db.brokers.Find(id);
+            if (brokers == null)
+            {
+                return RedirectToAction("Error");
+            }
+            return View(brokers);
         }
     }
 }

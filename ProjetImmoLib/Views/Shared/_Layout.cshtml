@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        @Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <a href="/brokers/Index">Accueil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
                         Ajout
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Ajout courtier</a>
+                        <a class="dropdown-item" href="/brokers/AddBroker">Ajout courtier</a>
                         <a class="dropdown-item" href="#">Ajout client</a>
                         <a class="dropdown-item" href="#">Ajout rendez-vous</a>
                     </div>
