@@ -27,6 +27,7 @@ namespace ProjetImmoLib.Controllers
             return View();
         }
 
+
         [HttpPost]
         public ActionResult AddCustomer([Bind(Include = "idCustomer,lastname,firstname,mail,phonenumber,budget")] customers customers)
         {
@@ -55,6 +56,40 @@ namespace ProjetImmoLib.Controllers
         public ActionResult Success()
         {
             return View();
+        }
+
+        public ActionResult ProfilCustomer(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Error");
+            }
+            customers customers = db.customers.Find(id);
+            if (customers == null)
+            {
+                return RedirectToAction("Error");
+            }
+            return View(customers);
+        }
+
+        // EDIT: customers
+        [HttpPost]
+        public ActionResult ProfilCustomer([Bind(Include = "idCustomer,lastname,firstname,mail,phonenumber,budget")] customers customers)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(customers).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException)
+                {
+                    return RedirectToAction("Error");
+                }
+                return RedirectToAction("Success");
+            }
+            return View(customers);
         }
     }
 }
