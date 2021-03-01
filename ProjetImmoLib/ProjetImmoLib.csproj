@@ -123,6 +123,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\brokersController.cs" />
+    <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="customers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -166,6 +167,9 @@
     <Content Include="Views\brokers\Success.cshtml" />
     <Content Include="Views\brokers\ListBrokers.cshtml" />
     <Content Include="Views\brokers\ProfilBroker.cshtml" />
+    <Content Include="Views\customers\addCustomer.cshtml" />
+    <Content Include="Views\customers\Error.cshtml" />
+    <Content Include="Views\customers\Success.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

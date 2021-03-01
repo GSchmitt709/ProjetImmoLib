@@ -16,27 +16,14 @@ namespace ProjetImmoLib.Controllers
 
         private agendaEntities db = new agendaEntities();
 
-        // GET: customers
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult ListBrokers()
-        {
-            return View(db.customers.ToList());
-        }
-
-
-        public ActionResult AddBroker()
+        public ActionResult AddCustomer()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddBroker([Bind(Include = "idCustomers,lastname,firstname,mail,phonenumber,budget")] customers customers)
+        public ActionResult AddCustomer([Bind(Include = "idCustomer,lastname,firstname,mail,phonenumber,budget")] customers customers)
         {
-
             if (ModelState.IsValid)
             {
                 db.customers.Add(customers);
@@ -49,11 +36,8 @@ namespace ProjetImmoLib.Controllers
                 {
                     return RedirectToAction("Error");
                 }
-
-                //db.SaveChanges();
                 return RedirectToAction("Success");
             }
-
             return View();
         }
 
@@ -65,20 +49,6 @@ namespace ProjetImmoLib.Controllers
         public ActionResult Success()
         {
             return View();
-        }
-
-        public ActionResult ProfilCustomers(int? id)
-        {
-            if (id == null)
-            {
-                return RedirectToAction("Error");
-            }
-            customers customers = db.customers.Find(id);
-            if (customers == null)
-            {
-                return RedirectToAction("Error");
-            }
-            return View(customers);
         }
     }
 }
