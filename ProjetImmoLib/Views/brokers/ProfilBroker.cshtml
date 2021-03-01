@@ -5,42 +5,57 @@
 }
 
 <h2>ProfilBroker</h2>
+@using (Html.BeginForm())
+{
 
+    <div>
+        <h4>brokers</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.lastname, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.lastname, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+            </dt>
+
+            <dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.firstname, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.firstname, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+            </dt>
+
+            <dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.mail, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.mail, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+            </dt>
+
+            <dt>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.phonenumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.phonenumber, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+            </dt>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ajouter" class="btn btn-default" />
+                </div>
+            </div>
+        </dl>
+    </div>
+}
 <div>
-    <h4>brokers</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.lastname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.lastname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.firstname)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.firstname)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.mail)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.mail)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.phonenumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.phonenumber)
-        </dd>
-
-    </dl>
+    @Html.ActionLink("Back to List", "Index")
 </div>
+

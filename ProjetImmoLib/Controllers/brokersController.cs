@@ -82,5 +82,25 @@ namespace ProjetImmoLib.Controllers
             }
             return View(brokers);
         }
+
+        // EDIT: brokers
+        [HttpPost]
+        public ActionResult ProfilBroker([Bind(Include = "idBroker,lastname,firstname,mail,phonenumber")] brokers brokers)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(brokers).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (DbEntityValidationException)
+                {
+                    return RedirectToAction("Error");
+                }
+                return RedirectToAction("Index");
+            }
+            return View(brokers);
+        }
     }
 }
