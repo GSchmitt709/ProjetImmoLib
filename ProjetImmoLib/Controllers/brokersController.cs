@@ -93,7 +93,7 @@ namespace ProjetImmoLib.Controllers
                 {
                     return RedirectToAction("Error");
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
             return View(brokers);
         }
