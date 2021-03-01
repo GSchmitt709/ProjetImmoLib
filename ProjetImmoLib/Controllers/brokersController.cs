@@ -16,7 +16,6 @@ namespace ProjetImmoLib.Controllers
 
         private agendaEntities db = new agendaEntities();
 
-        // GET: brokers
         public ActionResult Index()
         {
             return View();
@@ -49,10 +48,6 @@ namespace ProjetImmoLib.Controllers
                 {
                     return RedirectToAction("Error");
                 }
-
-
-
-                //db.SaveChanges();
                 return RedirectToAction("Success");
             }
 
