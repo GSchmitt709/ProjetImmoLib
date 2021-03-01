@@ -16,6 +16,12 @@ namespace ProjetImmoLib.Controllers
 
         private agendaEntities db = new agendaEntities();
 
+        public ActionResult ListCustomers()
+        {
+            var customList = db.customers.SqlQuery("SELECT * FROM Customers ORDER BY lastname").ToList();
+            return View(customList);
+        }
+
         public ActionResult AddCustomer()
         {
             return View();

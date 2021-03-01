@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjetImmoLib.customers>
+
+@{
+    ViewBag.Title = "ListCustomers";
+}
+
+<h2>ListCustomers</h2>
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phonenumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.budget)
+        </td>
+        <td>
+            @Html.ActionLink("Profil", "ProfilCustomers", new { id = item.idCustomer })
+        </td>
+    </tr>
+    }
+</table>

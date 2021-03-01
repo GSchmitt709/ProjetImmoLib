@@ -170,6 +170,7 @@
     <Content Include="Views\customers\addCustomer.cshtml" />
     <Content Include="Views\customers\Error.cshtml" />
     <Content Include="Views\customers\Success.cshtml" />
+    <Content Include="Views\customers\ListCustomers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
