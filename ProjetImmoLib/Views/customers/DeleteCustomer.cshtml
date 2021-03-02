@@ -1,0 +1,19 @@
+﻿@model ProjetImmoLib.customers
+
+@{
+    ViewBag.Title = "DeleteCustomer";
+}
+
+<h2>DeleteCustomer</h2>
+
+<h3>Confirmer la suppression?</h3>
+
+@Html.HiddenFor(model => model.idCustomer)
+
+@using (Html.BeginForm())
+{
+    <div class="form-actions no-color">
+        <input type="submit" value="DeleteCustomer" class="btn btn-default" /> |
+        @Html.ActionLink("Retourner a l'index", "ListCustomers")
+    </div>
+}

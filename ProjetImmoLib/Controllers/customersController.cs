@@ -91,5 +91,29 @@ namespace ProjetImmoLib.Controllers
             }
             return View(customers);
         }
+
+        public ActionResult DeleteCustomer(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Error");
+            }
+            customers customers = db.customers.Find(id);
+            if (customers == null)
+            {
+                return HttpNotFound();
+            }
+            return View(customers);
+        }
+
+        [HttpPost, ActionName("DeleteCustomer")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            customers customers = db.customers.Find(id);
+            db.customers.Remove(customers);
+            db.SaveChanges();
+            return RedirectToAction("ListCustomers");
+        }
+
     }
 }

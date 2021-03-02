@@ -172,6 +172,7 @@
     <Content Include="Views\customers\Success.cshtml" />
     <Content Include="Views\customers\ListCustomers.cshtml" />
     <Content Include="Views\customers\ProfilCustomer.cshtml" />
+    <Content Include="Views\customers\DeleteCustomer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

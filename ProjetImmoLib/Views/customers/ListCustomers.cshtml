@@ -9,25 +9,28 @@
 <table class="table">
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.lastname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.firstname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.mail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.phonenumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.budget)
-            </td>
-            <td>
-                @Html.ActionLink("Profil", "ProfilCustomer", new { id = item.idCustomer })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phonenumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.budget)
+        </td>
+        <td>
+            @Html.ActionLink("Profil", "ProfilCustomer", new { id = item.idCustomer })
+        </td>
+        <td>
+            @Html.ActionLink("Supprimer", "DeleteCustomer", new { id = item.idCustomer })
+        </td>
+    </tr>
     }
 </table>
