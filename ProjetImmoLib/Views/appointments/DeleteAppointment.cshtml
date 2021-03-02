@@ -1,0 +1,19 @@
+﻿@model ProjetImmoLib.appointments
+
+@{
+    ViewBag.Title = "DeleteAppointment";
+}
+
+<h2>DeleteAppointment</h2>
+
+<h3>Confirmer la suppression?</h3>
+
+@Html.HiddenFor(model => model.idApointment)
+
+@using (Html.BeginForm())
+{
+    <div class="form-actions no-color">
+        <input type="submit" value="DeleteAppointment" class="btn btn-default" /> |
+        @Html.ActionLink("Retourner a l'index", "Index")
+    </div>
+}

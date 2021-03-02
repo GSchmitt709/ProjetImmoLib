@@ -179,6 +179,7 @@
     <Content Include="Views\appointments\Success.cshtml" />
     <Content Include="Views\appointments\Index.cshtml" />
     <Content Include="Views\appointments\ProfilAppointment.cshtml" />
+    <Content Include="Views\appointments\DeleteAppointment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

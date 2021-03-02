@@ -79,5 +79,29 @@ namespace ProjetImmoLib.Controllers
             }
             return View(appointments);
         }
+
+        // DELETE
+        public ActionResult DeleteAppointment(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction("Error");
+            }
+            appointments appointments = db.appointments.Find(id);
+            if (appointments == null)
+            {
+                return HttpNotFound();
+            }
+            return View(appointments);
+        }
+
+        [HttpPost, ActionName("DeleteAppointment")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            appointments appointments = db.appointments.Find(id);
+            db.appointments.Remove(appointments);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

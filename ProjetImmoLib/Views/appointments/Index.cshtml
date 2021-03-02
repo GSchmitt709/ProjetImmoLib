@@ -53,6 +53,9 @@
     <td>
         @Html.ActionLink("ProfilAppointment", "ProfilAppointment", new { id = item.idApointment })
     </td>
+    <td>
+        @Html.ActionLink("Supprimer", "DeleteAppointment", new { id = item.idApointment })
+    </td>
 </tr>
     }
 
