@@ -122,6 +122,7 @@
     <Compile Include="brokers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\appointmentsController.cs" />
     <Compile Include="Controllers\brokersController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -173,6 +174,11 @@
     <Content Include="Views\customers\ListCustomers.cshtml" />
     <Content Include="Views\customers\ProfilCustomer.cshtml" />
     <Content Include="Views\customers\DeleteCustomer.cshtml" />
+    <Content Include="Views\appointments\AddAppointment.cshtml" />
+    <Content Include="Views\appointments\Error.cshtml" />
+    <Content Include="Views\appointments\Success.cshtml" />
+    <Content Include="Views\appointments\Index.cshtml" />
+    <Content Include="Views\appointments\ProfilAppointment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProjetImmoLib.appointments>
+
+@{
+    ViewBag.Title = "Liste des Rendez-vous";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dateHour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject)
+        </th>
+        <th>
+            Broker @Html.DisplayNameFor(model => model.brokers.lastname)
+        </th>
+        <th>
+            Broker @Html.DisplayNameFor(model => model.brokers.firstname)
+        </th>
+        <th>
+            Customer @Html.DisplayNameFor(model => model.customers.lastname)
+        </th>
+        <th>
+            Customer @Html.DisplayNameFor(model => model.customers.firstname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.dateHour)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.subject)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.brokers.lastname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.brokers.firstname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.customers.lastname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.customers.firstname)
+    </td>
+    <td>
+        @Html.ActionLink("ProfilAppointment", "ProfilAppointment", new { id = item.idApointment })
+    </td>
+</tr>
+    }
+
+</table>
