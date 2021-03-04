@@ -22,6 +22,13 @@ namespace ProjetImmoLib.Controllers
             return View(customList);
         }
 
+        [HttpPost]
+        public ActionResult ListCustomers(string search)
+        {
+            var searchList = db.customers.SqlQuery("SELECT * FROM Customers WHERE lastname LIKE '%" + search + "%' ORDER BY lastname").ToList();
+            return View(searchList);
+        }
+
         public ActionResult AddCustomer()
         {
             return View();
