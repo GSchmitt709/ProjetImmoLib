@@ -1,4 +1,8 @@
-﻿@model IEnumerable<ProjetImmoLib.customers>
+﻿@using PagedList;
+
+@using PagedList.Mvc;
+
+@model IPagedList<ProjetImmoLib.customers>
 
 @{
     ViewBag.Title = "ListCustomers";
@@ -13,30 +17,48 @@
 <h2>ListCustomers</h2>
 
 <table class="table">
-    @foreach (var item in Model)
+    <tr>
+        <th>
+            @Html.Label("lastname")
+        </th>
+        <th>
+            @Html.Label("firstname")
+        </th>
+        <th>
+            @Html.Label("mail")
+        </th>
+        <th>
+            @Html.Label("phonenumber")
+        </th>
+        <th>
+            @Html.Label("budget")
+        </th>
+    </tr>
+    @for (int i = 0; i < Model.Count; i++)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.lastname)
+                @Model[i].lastname
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.firstname)
+                @Model[i].firstname
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.mail)
+                @Model[i].mail
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.phonenumber)
+                @Model[i].phonenumber
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.budget)
+                @Model[i].budget
             </td>
             <td>
-                @Html.ActionLink("Profil", "ProfilCustomer", new { id = item.idCustomer })
+                @Html.ActionLink("Profil", "ProfilCustomer", new { @Model[i].idCustomer })
             </td>
             <td>
-                @Html.ActionLink("Supprimer", "DeleteCustomer", new { id = item.idCustomer })
+                @Html.ActionLink("Supprimer", "DeleteCustomer", new { @Model[i].idCustomer })
             </td>
         </tr>
     }
 </table>
+@Html.PagedListPager(Model, pageNumber => Url.Action("ListCustomers", new { pageNumber }))

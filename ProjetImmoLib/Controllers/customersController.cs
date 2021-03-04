@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ProjetImmoLib;
+using PagedList;
 
 namespace ProjetImmoLib.Controllers
 {
@@ -16,17 +17,17 @@ namespace ProjetImmoLib.Controllers
 
         private agendaEntities db = new agendaEntities();
 
-        public ActionResult ListCustomers()
+        public ActionResult ListCustomers(int? pageNumber)
         {
             var customList = db.customers.SqlQuery("SELECT * FROM Customers ORDER BY lastname").ToList();
-            return View(customList);
+            return View(customList.ToPagedList(pageNumber ?? 1, 5));
         }
 
         [HttpPost]
-        public ActionResult ListCustomers(string search)
+        public ActionResult ListCustomers(string search, int? pageNumber)
         {
             var searchList = db.customers.SqlQuery("SELECT * FROM Customers WHERE lastname LIKE '%" + search + "%' ORDER BY lastname").ToList();
-            return View(searchList);
+            return View(searchList.ToPagedList(pageNumber ?? 1, 5));
         }
 
         public ActionResult AddCustomer()

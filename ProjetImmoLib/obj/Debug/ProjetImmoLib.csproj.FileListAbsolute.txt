@@ -244,3 +244,7 @@ C:\Users\sebas\laManu\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csproj
 C:\Users\sebas\laManu\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.csproj.CopyComplete
 C:\Users\sebas\laManu\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.dll
 C:\Users\sebas\laManu\ProjetImmoLib\ProjetImmoLib\obj\Debug\ProjetImmoLib.pdb
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\PagedList.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\PagedList.Mvc.dll
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\PagedList.xml
+C:\Users\krady\source\repos\ProjetImmoLib\ProjetImmoLib\bin\PagedList.Mvc.xml
